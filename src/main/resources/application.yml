@@ -1,0 +1,22 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/learn
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+test:
+  abc: app_abc_test
+  def: app_def_test
+  ghi: app_ghi
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
