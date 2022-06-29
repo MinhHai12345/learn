@@ -1,9 +1,9 @@
 package com.minhhai.learn.repository;
 
-import com.minhhai.learn.entities.ConfigEntity;
+import com.minhhai.learn.entities.RoleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ConfigRepository extends JpaRepository<ConfigEntity, Long> {
+public interface RoleRepository extends JpaRepository<RoleEntity, Integer> {
 }

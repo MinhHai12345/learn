@@ -9,14 +9,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
 
-test:
-  abc: app_abc_test
-  def: app_def_test
-  ghi: app_ghi
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh
+app:
+  jwt:
+    secret: haivo
+    access-token-validity-in-seconds: 60
 
