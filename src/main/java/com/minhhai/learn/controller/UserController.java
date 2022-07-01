@@ -1,20 +1,11 @@
 package com.minhhai.learn.controller;
 
-import com.minhhai.learn.model.dto.UserDTO;
 import com.minhhai.learn.entities.RoleEntity;
 import com.minhhai.learn.entities.UserEntity;
-import com.minhhai.learn.jwt.JwtTokenUtil;
 import com.minhhai.learn.repository.RoleRepository;
 import com.minhhai.learn.repository.UserRepository;
-import io.jsonwebtoken.impl.DefaultClaims;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.EntityExistsException;
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -37,9 +27,6 @@ public class UserController {
 
     @Autowired
     private RoleRepository roleRepository;
-
-    @Autowired
-    private AuthenticationManager authenticationManager;
 
     @GetMapping()
     public String hello() {
